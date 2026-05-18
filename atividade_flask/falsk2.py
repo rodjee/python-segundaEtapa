@@ -1,0 +1,62 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return ''' 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+</head>
+<body>
+    <h1>Currículo - Rodrigo Camargo Safar -- MG-BH</h1>
+
+    <h2>CONTATOS</h2>
+    <ul>
+        <li><strong>(31) 99323-4247</strong></li>
+        <li><strong>safar.rodrigo@gmail.com</strong></li>
+        <li><strong>Joaquim Nabuco, Nova Suissa 154, Belo Horizonte - Brasil</strong></li>
+    </ul>
+
+    <h2>Cursando</h2>
+    <ul>
+        <li><strong>Colegio Cotemig</strong></li>
+        <li>2023 - Atualmente</li>
+        <li>3° do Ensino Médio</li>
+    </ul>
+
+    <h2>Habilidades <br>Tecnicas:</h2>
+    <ul>
+        <li>Conhecimento basico de hardware</li>
+        <li>Python (nível básico)</li>
+    </ul>
+
+    <h2>Habilidades Comprtamentais: </h2>
+    
+    <ul>
+        <li>Organização</li>
+        <li>Proatividade</li>
+        <li>Trabalho em equipe</li>
+        <li>Boa comunicação</li>
+    </ul>
+
+
+    <h2>Idiomas:</h2>
+
+    <ul>
+        <li><strong>1. </strong> Português nativo</li>
+        <li><strong>2. </strong> Inglês : intermediário B2</li>
+    </ul>
+
+
+
+</body>
+</html>
+
+    '''
+if __name__ == '__main__':
+    app.run(debug=True)
